@@ -48,12 +48,15 @@ const cloneNodePosition = element => {
 }
 
 const getMatrix = element => {
+    const coords = element.getBoundingClientRect()
     const style = getComputedStyle(element)
     const matrix = new WebKitCSSMatrix(style.webkitTransform)
     return {
         scale: matrix.m22,
         transformX: matrix.m41,
         transformY: matrix.m42,
+        width: coords.width,
+        height: coords.height
     }
 }
 const getDistanceToCenter = element => {
@@ -75,28 +78,36 @@ const getDistance = (element, point) => {
         y: point.y ? (point.y - coords.y) : 0
     }
 }
+const getSizeDifference = (element, sizes) => {
+    const coords = element.getBoundingClientRect()
+    return {
+        width: sizes.width ? (sizes.width - coords.width) : 0,
+        height: sizes.height ? (sizes.height - coords.height) : 0,
+    }
+}
 const modalToCenter = element => {
-    const { transformX, transformY } = getMatrix(element)
-    const distanceTransform = getDistanceToCenter(element)
-    const frameFinfal_1 = `translateX(${distanceTransform.x}px) translateY(${distanceTransform.y}px) scale(3)`
-    const keyframes_1 = [
-        { transform: `translateX(${transformX}px) translateY(${transformY}px)` },
-        { transform: frameFinfal_1 },
-    ]
+    const { transformX, transformY, width, height } = getMatrix(element)
+    const distanceMiddlefTop = getDistance(element, { x: window.innerWidth/2, y: window.innerHeight/6 })
+    const size = getSizeDifference(element, { width: 300, height: 300})
+
+    const frame1 = { 
+        width: `${width}px`,
+        height: `${height}px`,
+        left: 0,
+        transform: `translateX(${transformX}px) translateY(${transformY}px)`,
+    }
+    const frame2 = { 
+        width: `${size.width}px`, 
+        height: `${size.height}px`,
+        left: '50%',
+        transform: `translateX(-50%) translateY(${transformY+distanceMiddlefTop.y}px)`, 
+    }
+    const keyframes_1 = [ frame1, frame2 ]
     const options = {
         duration: 600,
-        iterations: 1,
         fill: 'forwards'
     }
-    const animation = element.animate(keyframes_1, options)
-    animation.onfinish = () => {
-        const distanceMiddleTop = getDistance(element, { x: window.innerWidth/2, y: window.innerHeight/2.25 })
-        const keyframes_2 = [
-            { transform: frameFinfal_1 },
-            { transform: `translateX(${distanceMiddleTop.x}px) translateY(${distanceMiddleTop.y}px) scale(3)` }
-        ]
-        element.animate(keyframes_2, {...options, duration: 250})
-    }
+    element.animate(keyframes_1, options)
 }
 
 const card = createCard()
@@ -110,3 +121,6 @@ card.addEventListener('click', e => {
 
 $('#root').appendChild(card)
 
+const ViewCard = {
+    
+}
