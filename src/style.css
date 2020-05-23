@@ -1,9 +1,14 @@
+:root {
+    --pad-sizes: 1.5em; 
+}
 *{
     padding: 0;margin: 0;
     box-sizing: border-box;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-#root {
-    width: 100%;
-    min-height: 100vh;
+body, html {
+    padding: 0;margin: 0;
+}
+ul {
+    list-style: none;
 }

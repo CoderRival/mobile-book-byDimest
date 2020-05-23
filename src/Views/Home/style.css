@@ -1,0 +1,49 @@
+/* Container and direct children */
+#home {
+    padding: 0 var(--pad-sizes);
+}
+#home > * {
+    margin-top: 1em;
+}
+
+/* Header */
+#home > header {
+
+}
+
+/* Section */
+#home > section {
+
+}
+
+/* Nav */
+#home > nav > ul {
+    display: flex; 
+    justify-content: space-between; 
+    align-items: flex-start; 
+    border-bottom: .5px solid rgba(0,0,0,.1);
+}
+#home > nav > ul > li > a {
+    text-decoration: none;
+    color: #A5A9B1;
+    font-weight: bold;
+    font-size: 1.2em;
+
+}
+#home > nav > ul > li > a.select{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: black;
+}
+#home > nav > ul > li > a.select::after {
+    content: '';
+    width: 12px;
+    height: 8px;
+    border-bottom: 2px solid #0D8073;
+}
+
+/* Main */
+#home > main {
+
+}

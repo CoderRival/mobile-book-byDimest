@@ -1,0 +1,58 @@
+.card {
+    display: flex;
+    margin: 1em 0;
+    padding: 1em 0 .5em 0;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.12);
+}
+.card > header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.card > * {
+    padding: 0 0 .5em 1em;
+}
+.card > header > img {
+    padding: 0 1em 1em 1em;
+    box-shadow: 
+        inset 0 -.4em .2em -2px rgba(0,0,0,.1),
+        0 .3em 8px -6px rgba(0,0,0,.4);
+}
+.card > main {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.card > main > * {
+}
+.card__category {
+    --color: #FDCA1C;
+    border-radius: 1em;
+    padding: .2em .5em;
+    font-weight: bold;
+    border: 2px solid var(--color);
+    color: var(--color);
+}
+.card__title {
+    font-size: 1.375em;
+}
+.card__author {
+    flex-grow: 1;
+}
+.card__percentage {
+    display: flex;
+    align-items: center;
+}
+.card__percentage > progress{
+    color: green;
+}
+.card__percentage > progress::-moz-progress-bar,
+.card__percentage > progress::-webkit-progress-value {
+    background: green;
+}
+
+.card__percentage > span {
+    font-size: 1.2em;
+    margin-left: .5em;
+}
