@@ -1,5 +1,5 @@
 import './style.css'
-const Card = data => {
+const Card = ({data}) => {
     const element = document.createElement('article')
     element.classList.add('card')
     element.__data = data
@@ -7,8 +7,10 @@ const Card = data => {
     const { title, author, percentage, image, category } = data
 
     element.innerHTML = /* html */ `
-        <header class="card__imagen">
-            <img loading="lazy" width="120" height="150" src="${image}" alt="Book ${title} by ${author}"/>
+        <header>
+            <img loading="lazy" width="120" height="150"
+                class="card__imagen" src="${image}" 
+                alt="Book ${title} by ${author}"/>
         </header>
         <main>
             <span class="card__category">${category}</span>
@@ -25,7 +27,7 @@ const Card = data => {
         </main>
     `
 
-    return element
+    return { element }
 }
 
 export default Card

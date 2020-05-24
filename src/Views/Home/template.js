@@ -12,8 +12,17 @@ template.innerHTML = /* html */`
         <!-- <img src="" alt=""/> -->
         <div style="
             height: 160px; 
-            background-image: linear-gradient(to bottom right, #1EA8D4, #1888A0); 
-            border-radius: 1em;">
+            background-image: 
+                linear-gradient(to bottom right, #13C0C7, #089999); 
+            border-radius: 1em; 
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            font-size: 1.2em;
+            ">
+            <span style="margin: .5em 1em; font-weight: 100;">Study time today</span>
+            <span data-time  style="margin: .5em 1em; font-weight: 500;"></span>
         </div>
     </section>
     <nav>
@@ -32,7 +41,7 @@ template.innerHTML = /* html */`
             </li>
         </ul>
     </nav>
-    <main data-root="true">
+    <main data-root>
 
     </main>
 </div>

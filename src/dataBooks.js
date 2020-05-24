@@ -1,0 +1,58 @@
+const dataBooks = [
+    {
+        title: 'The Messy Middle',
+        author: 'Jane Austen',
+        category: 'Fiction',
+        content: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sed, fugit dolorem eos vel magni temporibus eveniet explicabo voluptatum veritatis suscipit inventore eius rem maxime sequi ipsum sit labore deleniti fugiat!',
+        stars: 4,
+        percentage: 70,
+        image: 'https://picsum.photos/120/150?random=1',
+    },
+    {
+        title: 'Holy Bird New Classics',
+        author: 'Jane Austen',
+        category: 'Fiction',
+        content: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sed, fugit dolorem eos vel magni temporibus eveniet explicabo voluptatum veritatis suscipit inventore eius rem maxime sequi ipsum sit labore deleniti fugiat!',
+        stars: 5,
+        percentage: 70,
+        image: 'https://picsum.photos/120/150?random=2',
+    },
+    {
+        title: 'The Messy Middle',
+        author: 'Jane Austen',
+        category: 'Fiction',
+        content: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sed, fugit dolorem eos vel magni temporibus eveniet explicabo voluptatum veritatis suscipit inventore eius rem maxime sequi ipsum sit labore deleniti fugiat!',
+        stars: 3,
+        percentage: 70,
+        image: 'https://picsum.photos/120/150?random=3',
+    },
+    {
+        title: 'Holy Bird New Classics',
+        author: 'Jane Austen',
+        category: 'Fiction',
+        content: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sed, fugit dolorem eos vel magni temporibus eveniet explicabo voluptatum veritatis suscipit inventore eius rem maxime sequi ipsum sit labore deleniti fugiat!',
+        stars: 2,
+        percentage: 70,
+        image: 'https://picsum.photos/120/150?random=4',
+    },
+    {
+        title: 'The Messy Middle',
+        author: 'Jane Austen',
+        category: 'Fiction',
+        content: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sed, fugit dolorem eos vel magni temporibus eveniet explicabo voluptatum veritatis suscipit inventore eius rem maxime sequi ipsum sit labore deleniti fugiat!',
+        stars: 3,
+        percentage: 70,
+        image: 'https://picsum.photos/120/150?random=5',
+    },
+    {
+        title: 'Holy Bird New Classics',
+        author: 'Jane Austen',
+        category: 'Fiction',
+        content: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sed, fugit dolorem eos vel magni temporibus eveniet explicabo voluptatum veritatis suscipit inventore eius rem maxime sequi ipsum sit labore deleniti fugiat!',
+        stars: 2,
+        percentage: 70,
+        image: 'https://picsum.photos/120/150?random=6',
+    },
+]
+
+export default dataBooks

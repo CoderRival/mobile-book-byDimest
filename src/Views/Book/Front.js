@@ -1,7 +1,10 @@
 const element = document.createElement('div')
 
-element.innerHTML = /* html */ `
+const Front = ({data}) => {
+    element.innerHTML = /* html */ `
 
-`
+    `
+    return element
+}
 
-export default element
+export default Front
